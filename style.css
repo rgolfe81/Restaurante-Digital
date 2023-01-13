@@ -1,19 +1,36 @@
-@import url('https://fonts.googleapis.com/css2?family=Amaranth&family=Lobster&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Amaranth&family=Lobster&display=swap'); /*importamos el tipo de fuente*/
 *{
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    font-family: 'Amaranth', sans-serif; /*incluimos el tipo de fuente importado*/
 }
 body{
     background-image: url("imagenes/fondo2.jpg");
     background-repeat: no-repeat;
     background-attachment: fixed;
-    background-size: cover; /* la imagen de fondo rellena la pantalla*/
+    background-size: 100vw 100vh /* la imagen de fondo ocupará el 100% de ancho y 100% de alto de cualquier pantalla*/
 }
-a {
+a{
     color: white;
     text-decoration: none;
-    font-family: 'Amaranth', sans-serif;
+}
+form{
+    width: 40em;
+    margin: auto; /* centramos el formulario*/
+    background: rgba(0,0,0,0.5); /* hacemos el fondo del formulario transparente*/
+    margin-top: 5em;
+    padding: 2em;
+    border-radius: 1.5em;
+}
+input, textarea{
+    width: 100%;
+    margin: 0.5em;
+    padding: 0.5em;
+    border-radius: 0.5em;
+}
+textarea{
+    min-height: 8em;
 }
 .nav-links{
     background-color: black;
@@ -22,12 +39,36 @@ a {
     height: 2.5em;
     padding: 1em;
     font-size: 2em;
-    list-style: none;
+    list-style: none; /* quitamos los puntos del listado*/
     
 }
 .item{
-    padding: 0 1em;
+    padding: 0 1em; /* hacemos la separacion entre los items de la barra de navegación*/
+    transition: 0.5s; /* hacemos que agrandar el item se realice progresivamente*/
 }
 .item:hover{
-    transform : scale(1.1);
+    transform : scale(1.1); /* incluimos el efecto de agrandar el item cuando pasa el ratón*/
+}
+.infoHome{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    color: white;
+}
+.logo img{
+    width: 15em;
+    height: auto;
+    margin-top: 3em;
+}
+.infoAdress h3{
+    margin-top: 2em;
+}
+#botonForm{
+    background-color: dimgray;
+    font-size: 1em;
+    transition: background-color 0.5s;
+}
+#botonForm:hover{
+    cursor: pointer;
+    background-color: darkslategray;
 }
