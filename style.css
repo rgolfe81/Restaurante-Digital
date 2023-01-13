@@ -32,6 +32,9 @@ input, textarea{
 textarea{
     min-height: 8em;
 }
+section{
+    color: white;
+}
 .nav-links{
     background-color: black;
     display: flex;
@@ -63,6 +66,10 @@ textarea{
 .infoAdress h3{
     margin-top: 2em;
 }
+.imagenPlatoInfoCarta img{
+    width: 15em;
+    height: 10em;
+}
 #botonForm{
     background-color: dimgray;
     font-size: 1em;
@@ -71,4 +78,8 @@ textarea{
 #botonForm:hover{
     cursor: pointer;
     background-color: darkslategray;
+}
+#iconoTelefono{
+    width: 1em;
+    height: auto;
 }
