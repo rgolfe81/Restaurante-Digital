@@ -66,9 +66,49 @@ section{
 .infoAdress h3{
     margin-top: 2em;
 }
+.infoCarta{
+    margin: 2em;
+    padding: 2em;
+}
+.tituloInfoCarta{
+    background-color:  rgb(0,0,0,0.4);
+    margin: 1em;
+    padding: 0.5em;
+    border-radius: 0.5em;
+    border: solid 0.1em;
+}
+.bloqueSeccion{
+    background-color: rgb(0,0,0,0.4);
+    margin: 1em;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    justify-items: center;
+    border-radius: 0.5em;
+}
+.bloqueSeccionPostres{
+    background-color:  rgb(0,0,0,0.4);
+    margin: 1em;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+    border-radius: 0.5em;
+}
+.platoInfoCarta{
+    margin: 1em;
+    padding: 1em;
+    transition: transform 0.5s;
+}
+.platoInfoCarta:hover{
+    transform: scale(1.1);
+}
+.descripcionPlatoInfoCarta{
+    display: flex;
+    justify-content: space-around;
+}
 .imagenPlatoInfoCarta img{
     width: 15em;
     height: 10em;
+    border-radius: 0.5em;
 }
 #botonForm{
     background-color: dimgray;
