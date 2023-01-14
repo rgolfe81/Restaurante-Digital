@@ -16,7 +16,7 @@ a{
     text-decoration: none;
 }
 form{
-    width: 40em;
+    width: 50%;
     margin: auto; /* centramos el formulario*/
     background: rgba(0,0,0,0.5); /* hacemos el fondo del formulario transparente*/
     margin-top: 5em;
@@ -35,9 +35,15 @@ textarea{
 section{
     color: white;
 }
+footer{
+    text-align: center;
+    color:lightgrey;
+    margin-top: 5em;
+    border-top: solid black 0.1em;
+}
 .nav-links{
     background-color: black;
-    display: flex;
+    display: flex; /* utilizamos flexbox para que la barra de navegación sea responsive*/
     justify-content: center;
     height: 2.5em;
     padding: 1em;
@@ -47,15 +53,15 @@ section{
 }
 .item{
     padding: 0 1em; /* hacemos la separacion entre los items de la barra de navegación*/
-    transition: 0.5s; /* hacemos que agrandar el item se realice progresivamente*/
+    transition: 0.2s; /* hacemos que agrandar el item se realice progresivamente*/
 }
 .item:hover{
     transform : scale(1.1); /* incluimos el efecto de agrandar el item cuando pasa el ratón*/
 }
 .infoHome{
     display: flex;
-    justify-content: center;
-    text-align: center;
+    flex-direction: column;
+    align-items: center;
     color: white;
 }
 .logo img{
@@ -65,6 +71,9 @@ section{
 }
 .infoAdress h3{
     margin-top: 2em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 .infoCarta{
     margin: 2em;
@@ -75,15 +84,35 @@ section{
     margin: 1em;
     padding: 0.5em;
     border-radius: 0.5em;
-    border: solid 0.1em;
+    border-bottom: solid 0.1em;
 }
 .bloqueSeccion{
     background-color: rgb(0,0,0,0.4);
     margin: 1em;
-    display: grid;
+    display: grid; /* ulitizamos grid para que la carta sea responsive*/
     grid-template-columns: 1fr 1fr 1fr 1fr;
     justify-items: center;
     border-radius: 0.5em;
+}
+@media (max-width:1080px){ /* cuando baje la resolución de pantalla a menos de 1080px el grid se reducirá a dos columnas*/
+    .bloqueSeccion{
+        background-color: rgb(0,0,0,0.4);
+        margin: 1em;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        justify-items: center;
+        border-radius: 0.5em;
+    }
+}
+@media (max-width:768px){ /* cuando baje la resolución de pantalla a menos de 768px el grid se reducirá a una columna*/
+    .bloqueSeccion{
+        background-color: rgb(0,0,0,0.4);
+        margin: 1em;
+        display: grid;
+        grid-template-columns: 1fr;
+        justify-items: center;
+        border-radius: 0.5em;
+    }
 }
 .bloqueSeccionPostres{
     background-color:  rgb(0,0,0,0.4);
@@ -92,6 +121,16 @@ section{
     grid-template-columns: 1fr 1fr;
     justify-items: center;
     border-radius: 0.5em;
+}
+@media (max-width:768px){
+    .bloqueSeccionPostres{
+            background-color:  rgb(0,0,0,0.4);
+            margin: 1em;
+            display: grid;
+            grid-template-columns: 1fr;
+            justify-items: center;
+            border-radius: 0.5em;
+    }
 }
 .platoInfoCarta{
     margin: 1em;
